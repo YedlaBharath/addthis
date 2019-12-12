@@ -53,5 +53,27 @@ namespace Registraion
                 Console.WriteLine(ex.Message);
             }
         }
+        protected void search_click(object sender,EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(getConnection()))
+            {
+                string sql = @"SELECT * FROM info WHERE username LIKE @searchbyusername";
+                using (SqlCommand sc = new SqlCommand(sql,con))
+                {
+                    con.Open();
+                    sc.Parameters.AddWithValue("@searchbyusername", searchbyusername.Text+"%");
+                    sc.ExecuteNonQuery();
+                    using (SqlDataAdapter sda = new SqlDataAdapter(sc))
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            sda.Fill(dt);
+                            lv.DataSource = dt;
+                            lv.DataBind();
+                        }
+                    }
+                }
+            }
+        }
     }
 }

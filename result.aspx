@@ -16,7 +16,7 @@
                     <asp:Label ID="useremaillabel" runat="server" Text="Email"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="emailtxt" runat="server" ToolTip="Enter valid Email."></asp:TextBox>
+                    <asp:TextBox ID="emailtxt" runat="server" ToolTip="Enter valid Email." TextMode="Email"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -24,7 +24,7 @@
                     <asp:Label ID="userpasslabel" runat="server" Text="Password"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="passtxt" runat="server" ToolTip="Enter a valid Password."></asp:TextBox>
+                    <asp:TextBox ID="passtxt" runat="server" ToolTip="Enter a valid Password." TextMode="Password"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>

@@ -10,6 +10,9 @@
     <form id="form1" runat="server">
         <div>
             <h2>successfully Logged in</h2>
+            <asp:Label ID="searchlabel" runat="server" Text="Serach Username"></asp:Label>
+            <asp:TextBox ID="searchbyusername" runat="server"></asp:TextBox>
+            <asp:Button ID="searchbtn" runat="server" OnClick="search_click" Text="Search By Username"/>
             <asp:Button ID="listofusers" runat="server" OnClick="list_click" Text="List of Users" />
         </div>
     </form>
