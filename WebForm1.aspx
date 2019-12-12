@@ -97,6 +97,7 @@
                     </td>
                 </tr>
                 <tr>
+                    
                     <td>
                         <asp:Button ID="userbtn" runat="server" Text="Register" OnClick="register_click" />
                     </td>
@@ -106,6 +107,8 @@
                 </tr>
             </table>
         </div>
+        
     </form>
+    <p>Hi this is Bharath</p>
 </body>
 </html>
