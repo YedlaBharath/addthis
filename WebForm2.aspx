@@ -5,14 +5,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style>
+        .logclass {
+            text-align: right;
+            margin-left: auto;
+        }
+        
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
+        <div class="logclass" draggable="true"><asp:Button ID="logoutbtn" runat="server" OnClick="logout_click" Text="Logout" CssClass="logclass" BorderStyle="Dashed"/></div>
         <div>
             <h2>successfully Logged in</h2>
-            <asp:Label ID="searchlabel" runat="server" Text="Serach Username"></asp:Label>
+            <h2>WELCOME TO <asp:Label ID="labelemail" runat="server"></asp:Label></h2><br />
+            <br />
             <asp:TextBox ID="searchbyusername" runat="server"></asp:TextBox>
-            <asp:Button ID="searchbtn" runat="server" OnClick="search_click" Text="Search By Username"/>
+            <asp:Button ID="searchbtn" runat="server" OnClick="search_click" Text="Search By Username"/><br /><hr />
             <asp:Button ID="listofusers" runat="server" OnClick="list_click" Text="List of Users" />
         </div>
     </form>

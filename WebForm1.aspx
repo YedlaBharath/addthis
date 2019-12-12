@@ -14,7 +14,9 @@
 <body>
     <form id="form1" runat="server" >
         <div>
+            <center>
             <h2>User Registraion form</h2>
+                <fieldset style="border-radius:35px; text-align:left;padding-left:35px;height:100px;width:300px;">
             <table>
                 <tr>
                     <td>
@@ -109,6 +111,8 @@
                     </td>
                 </tr>
             </table>
+                    </fieldset>
+                </center>
         </div>
         
     </form>

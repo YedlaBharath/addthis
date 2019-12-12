@@ -16,7 +16,14 @@ namespace Registraion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["id"]!=null)
+            {
+                labelemail.Text = Session["id"].ToString();
+            }
+            else
+            {
+                Response.Redirect("result.aspx");
+            }
         }
         protected String getConnection()
         {
@@ -74,6 +81,12 @@ namespace Registraion
                     }
                 }
             }
+        }
+        protected void logout_click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Session.Abandon();
+            Response.Redirect("result.aspx");
         }
     }
 }

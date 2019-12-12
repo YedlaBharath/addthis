@@ -9,7 +9,7 @@
 <body>
     <h2>sussfully registered</h2>
     <form id="form1" runat="server">
-        
+        <fieldset style="border-radius:35px; text-align:left;padding-left:35px;height:100px;width:300px;">
         <asp:Table ID="Table1" runat="server" Height="16px" Width="422px">
             <asp:TableRow>
                 <asp:TableCell>
@@ -36,6 +36,7 @@
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
+            </fieldset>
     </form>
     <asp:Label ID="msg" runat="server"></asp:Label>
 </body>

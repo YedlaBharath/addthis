@@ -29,7 +29,6 @@ namespace Registraion
                     string sql = @"SELECT * FROM info WHERE email=@email AND password=@password";
                     using (SqlCommand sc = new SqlCommand(sql, con))
                     {
-
                         sc.Parameters.AddWithValue("@email", emailtxt.Text);
                         sc.Parameters.AddWithValue("@password", passtxt.Text);
                         using (SqlDataAdapter sda = new SqlDataAdapter(sc))
@@ -42,7 +41,9 @@ namespace Registraion
                                 con.Close();
                                 if (dt.Rows.Count > 0)
                                 {
+                                    Session["id"] = emailtxt.Text;
                                     Response.Redirect("WebForm2.aspx");
+                                    Session.RemoveAll();
                                 }
                                 else
                                 {
