@@ -19,31 +19,7 @@ namespace Registraion
         }
         protected void register_click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(getConnection()))
-            {
-                string sql = @"INSERT INTO info (id,username,email,password,gender,country) VALUES(@id,@username,@email,@password,@gender,@country)";
-                using (SqlCommand sc = new SqlCommand(sql, con))
-                {
-                    sc.CommandType = CommandType.Text;
-                    sc.Parameters.AddWithValue("@id", id.Text);
-                    sc.Parameters.AddWithValue("@username", username.Text);
-                    sc.Parameters.AddWithValue("@email", email.Text);
-                    sc.Parameters.AddWithValue("@password", Getpassword());
-                    sc.Parameters.AddWithValue("@gender", gender.SelectedItem.Text);
-                    sc.Parameters.AddWithValue("@country", country.SelectedValue);
-                    con.Open();
-                    sc.ExecuteNonQuery();
-                    Clear();
-                }
-            }
-        }
 
-        private void Clear()
-        {
-            username.Text = email.Text = password.Text = genderlabel.Text = country.Text = "";
-        }
-        private string Getpassword()
-        {
             int count = 0;
             HashSet<char> specialCharacters = new HashSet<char>() { '%', '$', '#' };
             try
@@ -62,17 +38,41 @@ namespace Registraion
                     count++;
                 if (count >= 3)
                 {
-                    return password.Text;
+                    using (SqlConnection con = new SqlConnection(getConnection()))
+                    {
+                        string sql = @"INSERT INTO info (id,username,email,password,gender,country) VALUES(@id,@username,@email,@password,@gender,@country)";
+                        using (SqlCommand sc = new SqlCommand(sql, con))
+                        {
+                            sc.CommandType = CommandType.Text;
+                            sc.Parameters.AddWithValue("@id", id.Text);
+                            sc.Parameters.AddWithValue("@username", username.Text);
+                            sc.Parameters.AddWithValue("@email", email.Text);
+                            sc.Parameters.AddWithValue("@password", password.Text);
+                            sc.Parameters.AddWithValue("@gender", gender.SelectedItem.Text);
+                            sc.Parameters.AddWithValue("@country", country.SelectedValue);
+                            con.Open();
+                            sc.ExecuteNonQuery();
+                            Clear();
+                        }
+                    }
                 }
+                else
+                {
+                    msg.Text = "The password must contain atlest one {a-z,A-Z,0-9}";
+                }
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            //return Response.Redirect("WebForm2.aspx");
-            return "invalid";
         }
-        public
+
+        public void Clear()
+        {
+            username.Text = email.Text = password.Text = genderlabel.Text = country.Text = "";
+        }
     }
 }
+
     

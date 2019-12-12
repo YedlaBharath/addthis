@@ -57,6 +57,9 @@
                     <td>
                         <asp:RequiredFieldValidator ID="passv" runat="server" ControlToValidate="Password" Display="Dynamic" ErrorMessage="Please Enter Your Password" SetFocusOnError="True" CssClass="validation"></asp:RequiredFieldValidator>
                     </td>
+                    <td>
+                        <asp:Label ID="msg" runat="server"></asp:Label>
+                    </td>
                 </tr>
                 
                 <tr>
@@ -67,7 +70,7 @@
                         <asp:TextBox ID="conformpassword" runat="server" TextMode="Password"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:CompareValidator ID="cv" runat="server" ControlToCompare="conformpassword" ControlToValidate="password" Display="Dynamic" ErrorMessage="Enter above Password" SetFocusOnError="True" CssClass="validation"></asp:CompareValidator>
+                        <asp:CompareValidator ID="cv" runat="server" ControlToCompare="conformpassword" ControlToValidate="password" Display="Dynamic" ErrorMessage="Enter same Password" SetFocusOnError="True" CssClass="validation"></asp:CompareValidator>
                     </td>
                 </tr>
                 
