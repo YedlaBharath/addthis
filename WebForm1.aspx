@@ -98,16 +98,6 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="checkboxlabel" runat="server" Text="sports"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:CheckBox ID="checkbox1" runat="server" Text="Football" />
-                        <asp:CheckBox ID="checkbox2" runat="server" Text="Cricket" />
-                        <asp:CheckBox ID="checkbox4" runat="server" Text="Basketball" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <asp:Button ID="userbtn" runat="server" Text="Register" OnClick="register_click" />
                     </td>
                     <td>
@@ -115,44 +105,7 @@
                     </td>
                 </tr>
             </table>
-            
-            
-            
-            
         </div>
     </form>
-    <div style="width: 651px" draggable="true" role="list" title="Users Details">
-            <asp:Table ID="table1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellPadding="5" CellSpacing="5" Font-Italic="True" Width="501px" EnableTheming="True" ForeColor="#000066" GridLines="Both" HorizontalAlign="Center">
-                <asp:TableRow>
-                    <asp:TableHeaderCell>id</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>username</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>email</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>password</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>gender</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>country</asp:TableHeaderCell>
-                </asp:TableRow>
-                
-                <asp:TableRow>
-                    <asp:TableCell>
-                        <asp:Label ID="idr" runat="server"></asp:Label>
-                    </asp:TableCell>
-                    <asp:TableCell >
-                        <asp:Label ID="usernamer" runat="server"></asp:Label>
-                    </asp:TableCell>
-                    <asp:TableCell >
-                        <asp:Label ID="emailr" runat="server"></asp:Label>
-                    </asp:TableCell>
-                    <asp:TableCell >
-                        <asp:Label ID="passwordr" runat="server"></asp:Label>
-                    </asp:TableCell>
-                    <asp:TableCell >
-                        <asp:Label ID="genderr" runat="server"></asp:Label>
-                    </asp:TableCell>
-                    <asp:TableCell >
-                        <asp:Label ID="countryr" runat="server"></asp:Label>
-                    </asp:TableCell>
-                </asp:TableRow>
-            </asp:Table>
-        </div>
 </body>
 </html>
