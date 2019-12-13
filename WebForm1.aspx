@@ -16,7 +16,7 @@
         <div>
             <center>
             <h2>User Registraion form</h2>
-                <fieldset style="border-radius:35px; text-align:left;padding-left:35px;height:100px;width:300px;">
+                <fieldset style="border-radius:35px; text-align:left;padding-left:35px;height:300px;width:300px;">
             <table>
                 <tr>
                     <td>
@@ -101,9 +101,8 @@
                         </asp:DropDownList>
                     </td>
                 </tr>
-                <tr>
-                    
-                    <td>
+                 <tr>
+                     <td>
                         <asp:Button ID="userbtn" runat="server" Text="Register" OnClick="register_click" />
                     </td>
                     <td>
@@ -116,6 +115,5 @@
         </div>
         
     </form>
-    <p>Hi this is Bharath</p>
 </body>
 </html>

@@ -36,8 +36,11 @@
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-            </fieldset>
+            </fieldset><br />
+        <a href="#" onclick="window.open('forgotpassword.aspx','FP','width=500,heigth=100,top=300,left=500,fullscrene=no,resizable=0');">Forgot Password ?</a>
     </form>
+    
+    
     <asp:Label ID="msg" runat="server"></asp:Label>
 </body>
 </html>

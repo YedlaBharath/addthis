@@ -138,3 +138,7 @@ E:\Git projects\myReporegistration\Registraion\obj\Debug\Registraion.csprojAssem
 E:\Git projects\myReporegistration\Registraion\obj\Debug\Registraion.csproj.CopyComplete
 E:\Git projects\myReporegistration\Registraion\obj\Debug\Registraion.dll
 E:\Git projects\myReporegistration\Registraion\obj\Debug\Registraion.pdb
+E:\Git projects\myReporegistration\Registraion\bin\EntityFramework.dll
+E:\Git projects\myReporegistration\Registraion\bin\EntityFramework.SqlServer.dll
+E:\Git projects\myReporegistration\Registraion\bin\EntityFramework.xml
+E:\Git projects\myReporegistration\Registraion\bin\EntityFramework.SqlServer.xml
