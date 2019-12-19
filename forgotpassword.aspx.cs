@@ -37,7 +37,7 @@ namespace Registraion
                                 string email = sdr["email"].ToString();
                                 string password = sdr["password"].ToString();
 
-                                MailMessage mm = new MailMessage("bharathreddy1689@gmail.com", txtemail.Text);
+                                MailMessage mm = new MailMessage("bharathkumarreddy.yedla@studentmail.unicas.it", txtemail.Text);
                                 mm.Subject = "Your Password";
                                 mm.Body = string.Format("Hello <h2>{0}</h2> This is Your Password <h2>{1}</h2>", email, password);
                                 mm.IsBodyHtml = true;
@@ -48,8 +48,8 @@ namespace Registraion
 
                                 smtp.UseDefaultCredentials = true;
                                 NetworkCredential nc = new NetworkCredential();
-                                nc.UserName = "bharathreddy1689@gmail.com";
-                                nc.Password = "bharathreddy5858";
+                                nc.UserName = "bharathkumarreddy.yedla@studentmail.unicas.it";
+                                nc.Password = "arun5858";
                                 
                                 
                                 smtp.Credentials = nc;
